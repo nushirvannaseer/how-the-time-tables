@@ -1,0 +1,58 @@
+Theory of Automata (BCS-5C)/Computer Networks (BCS-7F)/Tech. & Business Writing (BCS-5C)/Numerical Computing (BCS-5E)/Software Design & Analysis (BCS-5F)/Computer Networks Lab  (BCS-5B1, BCS-5B2)
+
+####################################
+Monday:
+Computer Networks (BCS-7F)
+Start: 8:0
+End: 9:30
+Software Design & Analysis (BCS-5F)
+Start: 8:0
+End: 9:30
+<<<CLASH EXISTS>>>
+
+Theory of Automata (BCS-5C)
+Start: 12:30
+End: 2:0
+
+####################################
+Tuesday:
+Tech. & Business Writing (BCS-5C)
+Start: 8:0
+End: 9:30
+Numerical Computing (BCS-5E)
+Start: 12:30
+End: 2:0
+
+####################################
+Wednesday:
+Computer Networks (BCS-7F)
+Start: 8:0
+End: 9:30
+Software Design & Analysis (BCS-5F)
+Start: 8:0
+End: 9:30
+<<<CLASH EXISTS>>>
+
+Theory of Automata (BCS-5C)
+Start: 12:30
+End: 2:0
+
+####################################
+Thursday:
+Tech. & Business Writing (BCS-5C)
+Start: 8:0
+End: 9:30
+Computer Networks Lab  (BCS-5B1, BCS-5B2)
+Start: 11:0
+End: 2:0
+Numerical Computing (BCS-5E)
+Start: 12:30
+End: 2:0
+<<<CLASH EXISTS>>>
+
+
+####################################
+Friday:
+#####################################
+#####################################
+#####################################
