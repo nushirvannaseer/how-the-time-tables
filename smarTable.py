@@ -53,15 +53,22 @@ if __name__ == "__main__":
     createTable(table, "timeTable.csv")
 
     #coursesStr = input("Enter your courses separated by a comma:")
-    coursesList = ["Operating Systems (BCS-5D)", "Data Science"]
+    coursesList = ["Operating Systems (BCS-5D)", "Theory of Automata (BCS-5C)"]
     print(coursesList)
-    print(table.keys)
     i = 0
+    courses = ""
     for key in table:
         for i in range(len(table[key])):
             if table[key][i] != None:
+                clashCount = 0
+                courses = ""
                 for j in range(len(table[key][i])):
                     if table[key][i][j].name in coursesList:
-                        print(key + ": " + str(table[key][i][j].name) + '\n' +
-                              str(table[key][i][j].start) + '\n' +
-                              str(table[key][i][j].end))
+                        clashCount += 1
+                        courses += key + ": " + str(
+                            table[key][i][j].name) + '\n' + str(
+                                table[key][i][j].start) + '\n' + str(
+                                    table[key][i][j].end) + '\n'
+                if clashCount > 1:
+                    courses = "CLASHING COURSES:\n" + courses + "\n#END\n"
+                if courses != "": print(courses)
