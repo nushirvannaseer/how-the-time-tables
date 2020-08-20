@@ -39,7 +39,7 @@ def createTable(table, file, courseList):
                 if list[j] not in courseList:
                     courseList.append(list[j])
                 duration = 0
-                if list[j].find("Lab") != -1:
+                if list[j].find("Lab") != -1 or list[j].find("(MSP") != -1:
                     endMin = startMin
                     endHour = (startHour + 3) % 12
                     #duration += 180
@@ -80,11 +80,11 @@ def createTable(table, file, courseList):
 
 if __name__ == "__main__":
     table = {
-        "Monday": [None] * 1000,
-        "Tuesday": [None] * 1000,
-        "Wednesday": [None] * 1000,
-        "Thursday": [None] * 1000,
-        "Friday": [None] * 1000,
+        "Monday": [None] * 100,
+        "Tuesday": [None] * 100,
+        "Wednesday": [None] * 100,
+        "Thursday": [None] * 100,
+        "Friday": [None] * 100,
     }
     completeCourseList = []
 
