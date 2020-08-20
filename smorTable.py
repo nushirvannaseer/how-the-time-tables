@@ -65,7 +65,9 @@ def createTable(table, file):
                     table[dayOfTheWeek][count].append(c)
             count += 1
             if hrCount == 5:
-                startHour = (startHour + 1) % 13
+                startHour += 1
+                if startHour > 12:
+                    startHour -= 12
                 startMin = 0
                 hrCount = 0
             else:
@@ -81,10 +83,10 @@ if __name__ == "__main__":
         "Thursday": [None] * 1000,
         "Friday": [None] * 1000,
     }
-
+    filename = input("Enter the csv file's name or path: ")
     outputFile = open("OutputTimeTable.txt", "a+")
     separator = "#####################################\n#####################################\n#####################################\n"
-    createTable(table, "timeTable.csv")
+    createTable(table, filename)
 
     while True:
         prevEndHour = -1
@@ -93,7 +95,7 @@ if __name__ == "__main__":
             input(
                 "Enter your courses separated by a forward slash (Type 'exit' to close the program): "
             ))
-        #coursesStr = "Theory of Automata (BCS-5C)/Computer Networks (BCS-7F)/Tech. & Business Writing (BCS-5C)/Numerical Computing (BCS-5E)/Software Design & Analysis (BCS-5F)/Computer Networks Lab  (BCS-5B1, BCS-5B2)"
+        #coursesStr = "Theory of Automata (BCS-5C)/Software Design & Analysis (BCS-5C)/Numerical Computing (BCS-5C)/Computer Networks (BCS-5C)/Computer Networks Lab  (BCS-5C1, BCS-5C2)"
         if coursesStr == "exit": break
 
         outputFile.write(coursesStr + '\n\n')
