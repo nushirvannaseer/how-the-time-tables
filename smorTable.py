@@ -17,7 +17,7 @@ def compareTimes(prevEndHour, startHour):
     return prevEndHour > startHour
 
 
-def createTable(table, file):
+def createTable(table, file, courseList):
     file = open("timeTable.csv", "r")
     line = file.readlines()
     dayOfTheWeek = ""
@@ -34,7 +34,10 @@ def createTable(table, file):
             days = list[0].split(" ")
             dayOfTheWeek = days[0]
         for j in range(6, len(list)):
-            if list[j] != "":
+            if list[j] != "" and not list[j].isdigit() and not list[j].isspace(
+            ):
+                if list[j] not in courseList:
+                    courseList.append(list[j])
                 duration = 0
                 if list[j].find("Lab") != -1:
                     endMin = startMin
@@ -77,30 +80,47 @@ def createTable(table, file):
 
 if __name__ == "__main__":
     table = {
-        "Monday": [None] * 10000,
+        "Monday": [None] * 1000,
         "Tuesday": [None] * 1000,
         "Wednesday": [None] * 1000,
         "Thursday": [None] * 1000,
         "Friday": [None] * 1000,
     }
+    completeCourseList = []
+
     filename = input("Enter the csv file's name or path: ")
     outputFile = open("OutputTimeTable.txt", "a+")
     separator = "#####################################\n#####################################\n#####################################\n"
-    createTable(table, filename)
+    # print("\nComplete Courses List:\n\n")
+    createTable(table, filename, completeCourseList)
+    completeCourseList.sort()
 
     while True:
+        print("\nComplete Courses List:\n\n")
+
+        x = 1
+        for courseName in completeCourseList:
+            print(str(x) + ". " + courseName)
+            x += 1
+
         prevEndHour = -1
         prevEndMin = -1
         coursesStr = str(
             input(
-                "Enter your courses separated by a forward slash (Type 'exit' to close the program): "
+                "Enter the numbers corresponding to the courses you want separated by a comma(Type 'exit' to close the program): "
             ))
         #coursesStr = "Theory of Automata (BCS-5C)/Software Design & Analysis (BCS-5C)/Numerical Computing (BCS-5C)/Computer Networks (BCS-5C)/Computer Networks Lab  (BCS-5C1, BCS-5C2)"
         if coursesStr == "exit": break
 
-        outputFile.write(coursesStr + '\n\n')
+        #outputFile.write(coursesStr + '\n\n')
         print('\n\n')
-        coursesList = coursesStr.split("/")
+        coursesList = coursesStr.split(",")
+        selectedCourses = []
+        for index in coursesList:
+            ind = int(index)
+            selectedCourses.append(completeCourseList[ind - 1])
+            outputFile.write(completeCourseList[ind - 1] + "; ")
+        outputFile.write("\n")
 
         i = 0
         days = 0
@@ -116,7 +136,7 @@ if __name__ == "__main__":
                 if table[key][i] != None:
                     clashCount = 0
                     for j in range(len(table[key][i])):
-                        if table[key][i][j].name in coursesList:
+                        if table[key][i][j].name in selectedCourses:
                             tempCourse = table[key][i][j]
                             clashCount += 1
                             if (compareTimes(
@@ -143,3 +163,10 @@ if __name__ == "__main__":
             days += 1
         print(separator)
         outputFile.write(separator)
+
+        while True:
+            cont = input("Continue? y/n:")
+            if cont == "n" or cont == "N":
+                exit()
+            elif cont == "y" or cont == "Y":
+                break
