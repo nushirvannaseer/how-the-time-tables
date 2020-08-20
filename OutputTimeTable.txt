@@ -1,43 +1,48 @@
-Theory of Automata (BCS-5C)/Software Design & Analysis (BCS-5C)/Numerical Computing (BCS-5C)/Computer Networks (BCS-5C)/Computer Networks Lab  (BCS-5C1, BCS-5C2)
-
-####################################
+Professional Issues in IT (BCS-9A); Computer Networks Lab  (BCS-5B1, BCS-5B2); Data Structures (BCS-3C); Design & Analysis of Algo (BCS-5D); Applied Physics (BCS-1H); Advanced Software Engineering (MSP-3A); ####################################
 Monday:
-Software Design & Analysis (BCS-5C)
-Start: 11:0
-End: 12:30
-Theory of Automata (BCS-5C)
-Start: 12:30
-End: 2:0
-Numerical Computing (BCS-5C)
-Start: 2:0
-End: 3:30
+Data Structures (BCS-3C)
+Start: 9:30
+End: 11:0
 
 ####################################
 Tuesday:
-Computer Networks (BCS-5C)
-Start: 9:30
-End: 11:0
-Computer Networks Lab  (BCS-5C1, BCS-5C2)
-Start: 2:0
+Design & Analysis of Algo (BCS-5D)
+Start: 11:0
+End: 12:30
+Professional Issues in IT (BCS-9A)
+Start: 12:30
+End: 2:0
+Applied Physics (BCS-1H)
+Start: 3:30
 End: 5:0
 
 ####################################
 Wednesday:
-Software Design & Analysis (BCS-5C)
-Start: 11:0
-End: 12:30
-Theory of Automata (BCS-5C)
-Start: 12:30
-End: 2:0
-Numerical Computing (BCS-5C)
-Start: 2:0
-End: 3:30
+Data Structures (BCS-3C)
+Start: 9:30
+End: 11:0
+Advanced Software Engineering (MSP-3A)
+Start: 5:0
+End: 6:30
 
 ####################################
 Thursday:
-Computer Networks (BCS-5C)
-Start: 9:30
-End: 11:0
+Design & Analysis of Algo (BCS-5D)
+Start: 11:0
+End: 12:30
+Computer Networks Lab  (BCS-5B1, BCS-5B2)
+Start: 11:0
+End: 2:0
+<<<CLASH EXISTS>>>
+
+Professional Issues in IT (BCS-9A)
+Start: 12:30
+End: 2:0
+<<<CLASH EXISTS>>>
+
+Applied Physics (BCS-1H)
+Start: 3:30
+End: 5:0
 
 ####################################
 Friday:
