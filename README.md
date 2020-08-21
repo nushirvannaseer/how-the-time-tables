@@ -1,4 +1,6 @@
-A sample result file and Time Table have been provided for your testing
+--------------Well, well, well how the time tables--------------
+
+A sample result file and the properly formatted Time Table have been provided.
 
 ->This program was specifically designed to facilitate the students targeting different sections for different courses. You can get a custom timetable and check if your model has any clashes or not.
 
