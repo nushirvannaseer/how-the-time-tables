@@ -1,0 +1,179 @@
+Artificial Intelligence (BCS-6A); Artificial Intelligence Lab (BCS-6A1, BCS-6A2); Software Engineering (BCS-6A); Parallel and Dist. Computing (BCS-6A); 
+
+-----------------------------------TIME TABLE-----------------------------------
+
+
+**********************************
+MONDAY:
+
+**********************************
+TUESDAY:
+	Parallel and Dist. Computing (BCS-6A)	8:0 to 9:30
+	Artificial Intelligence Lab (BCS-6A1, BCS-6A2)	2:0 to 5:0
+	Artificial Intelligence (BCS-6A)	5:0 to 6:30
+
+**********************************
+WEDNESDAY:
+	Software Engineering (BCS-6A)	9:30 to 11:0
+
+**********************************
+THURSDAY:
+	Parallel and Dist. Computing (BCS-6A)	8:0 to 9:30
+	Artificial Intelligence (BCS-6A)	5:0 to 6:30
+
+**********************************
+FRIDAY:
+	Software Engineering (BCS-6A)	9:30 to 11:0
+
+
+------------------------------------CLASHES-------------------------------------
+
+
+**********************************
+MONDAY:
+
+**********************************
+TUESDAY:
+
+**********************************
+WEDNESDAY:
+
+**********************************
+THURSDAY:
+
+**********************************
+FRIDAY:
+Artificial Intelligence (BCS-6B); 
+
+-----------------------------------TIME TABLE-----------------------------------
+
+
+**********************************
+MONDAY:
+
+**********************************
+TUESDAY:
+	Artificial Intelligence (BCS-6B)	3:30 to 5:0
+
+**********************************
+WEDNESDAY:
+
+**********************************
+THURSDAY:
+	Artificial Intelligence (BCS-6B)	3:30 to 5:0
+
+**********************************
+FRIDAY:
+
+
+------------------------------------CLASHES-------------------------------------
+
+
+**********************************
+MONDAY:
+
+**********************************
+TUESDAY:
+
+**********************************
+WEDNESDAY:
+
+**********************************
+THURSDAY:
+
+**********************************
+FRIDAY:
+Artificial Intelligence (BCS-6B); Artificial Intelligence Lab (BCS-6B1, BCS-6B2); Software Engineering (BCS-6B); Parallel and Dist. Computing (BCS-6B); 
+
+-----------------------------------TIME TABLE-----------------------------------
+
+
+**********************************
+MONDAY:
+	Software Engineering (BCS-6B)	9:30 to 11:0
+	Artificial Intelligence Lab (BCS-6B1, BCS-6B2)	11:0 to 2:0
+
+**********************************
+TUESDAY:
+	Parallel and Dist. Computing (BCS-6B)	9:30 to 11:0
+	Artificial Intelligence (BCS-6B)	3:30 to 5:0
+
+**********************************
+WEDNESDAY:
+	Software Engineering (BCS-6B)	9:30 to 11:0
+
+**********************************
+THURSDAY:
+	Parallel and Dist. Computing (BCS-6B)	9:30 to 11:0
+	Artificial Intelligence (BCS-6B)	3:30 to 5:0
+
+**********************************
+FRIDAY:
+
+
+------------------------------------CLASHES-------------------------------------
+
+
+**********************************
+MONDAY:
+
+**********************************
+TUESDAY:
+
+**********************************
+WEDNESDAY:
+
+**********************************
+THURSDAY:
+
+**********************************
+FRIDAY:
+Artificial Intelligence (BCS-6C); Artificial Intelligence Lab (BCS-6C1, BCS-6C2); Software Engineering (BCS-6C); Parallel and Dist. Computing (BCS-6C); 
+
+-----------------------------------TIME TABLE-----------------------------------
+
+
+**********************************
+MONDAY:
+	Software Engineering (BCS-6C)	11:0 to 2:0
+	Artificial Intelligence (BCS-6C)	12:30 to 2:0
+
+**********************************
+TUESDAY:
+	Artificial Intelligence Lab (BCS-6C1, BCS-6C2)	8:0 to 11:0
+	Parallel and Dist. Computing (BCS-6C)	2:0 to 3:30
+
+**********************************
+WEDNESDAY:
+	Software Engineering (BCS-6C)	11:0 to 2:0
+	Artificial Intelligence (BCS-6C)	12:30 to 2:0
+
+**********************************
+THURSDAY:
+	Parallel and Dist. Computing (BCS-6C)	2:0 to 3:30
+
+**********************************
+FRIDAY:
+
+
+------------------------------------CLASHES-------------------------------------
+
+
+**********************************
+MONDAY:
+	-> Artificial Intelligence (BCS-6C)	12:30 to 2:0
+	-> Software Engineering (BCS-6C)	11:0 to 2:0
+
+**********************************
+TUESDAY:
+
+**********************************
+WEDNESDAY:
+	-> Artificial Intelligence (BCS-6C)	12:30 to 2:0
+	-> Software Engineering (BCS-6C)	11:0 to 2:0
+
+**********************************
+THURSDAY:
+
+**********************************
+FRIDAY:

@@ -9,15 +9,15 @@ class course:
 
 
 def toHoursAndMinutes(time):
-    hours = int((time*10)/60)
-    minutes = int(60*(float((time*10)/60)-hours))
+    hours = int((time * 10) / 60)
+    minutes = int(60 * (float((time * 10) / 60) - hours))
     if hours > 12:
         hours -= 12
-    return str(hours)+":"+str(minutes)
+    return str(hours) + ":" + str(minutes)
 
 
 def createTable(table, file, courseList):
-    file = open("timeTable.csv", "r")
+    file = open("t1.csv", "r")
     line = file.readlines()
     dayOfTheWeek = ""
 
@@ -28,7 +28,10 @@ def createTable(table, file, courseList):
         endMin = 0
         if list[0] != "":
             days = list[0].split(" ")
+            if days[0] == "" or days[0] == " ":
+                days[0] = days[1]
             dayOfTheWeek = days[0]
+
         for j in range(6, len(list)):
 
             if list[j] != "" and not list[j].isdigit() and not list[j].isspace(
@@ -38,16 +41,16 @@ def createTable(table, file, courseList):
                     courseList.append(list[j])
 
                 duration = 1
-                while list[duration+j] == "":
+                while list[duration + j] == "":
                     duration += 1
-                if duration > 18:
+                if duration >= 18:
                     if list[j].find("Lab") > -1:
                         duration = 18
                     elif list[j].find("english") > -1:
                         duration = 12
                     else:
                         duration = 9
-                endMin = startMin+duration
+                endMin = startMin + duration
 
                 c = course(list[j], startMin, endMin)
                 if (table[dayOfTheWeek][count] == None):
@@ -64,15 +67,15 @@ def printTimeTable(outputTimeTable, outputFile=None):
         print("\n**********************************")
         print(str(key).upper() + ":\n")
         if outputFile != None:
-            outputFile.write(
-                "\n**********************************\n"+str(key).upper() + ":\n")
+            outputFile.write("\n**********************************\n" +
+                             str(key).upper() + ":\n")
         for obj in outputTimeTable[key]:
             name = obj.name
             start = toHoursAndMinutes(obj.startMin)
             end = toHoursAndMinutes(obj.endMin)
-            print("\t"+name+"\t"+start+" to "+end)
+            print("\t" + name + "\t" + start + " to " + end)
             if outputFile != None:
-                outputFile.write("\t"+name+"\t"+start+" to "+end)
+                outputFile.write("\t" + name + "\t" + start + " to " + end)
                 outputFile.write("\n")
 
 
@@ -81,20 +84,21 @@ def printClashTable(Table, outputFile=None):
         print("\n**********************************")
         print(str(key).upper() + ":")
         if outputFile != None:
-            outputFile.write(
-                "\n**********************************\n"+str(key).upper() + ":\n")
+            outputFile.write("\n**********************************\n" +
+                             str(key).upper() + ":\n")
         for obj in Table[key]:
             name = obj.name
             start = toHoursAndMinutes(obj.startMin)
             end = toHoursAndMinutes(obj.endMin)
-            print("\t-> "+name+"\t"+start+" to "+end)
+            print("\t-> " + name + "\t" + start + " to " + end)
             if outputFile != None:
-                outputFile.write("\t-> "+name+"\t"+start+" to "+end)
+                outputFile.write("\t-> " + name + "\t" + start + " to " + end)
                 outputFile.write("\n")
 
 
 #!experimental
-def findSuggestedCourse(OutputTimeTable, clashingCourses, clashingCoursesAlternatives):
+def findSuggestedCourse(OutputTimeTable, clashingCourses,
+                        clashingCoursesAlternatives):
     suggestions = []
     for key in clashingCourses:
         for clashingCourse in clashingCourses[key]:
@@ -115,7 +119,7 @@ def findSuggestedCourse(OutputTimeTable, clashingCourses, clashingCoursesAlterna
                                 if desiredCourse.name != clashingCourse.name:
                                     # if alt.startMin<desiredCourse.start and alt.endMin<desiredCourse.startMin:
 
-                                    x = range(alt.startMin+1, alt.endMin-1)
+                                    x = range(alt.startMin + 1, alt.endMin - 1)
                                     y = range(desiredCourse.startMin,
                                               desiredCourse.endMin)
                                     xs = set(x)
@@ -127,7 +131,8 @@ def findSuggestedCourse(OutputTimeTable, clashingCourses, clashingCoursesAlterna
                                         break
                     # altRejected = False
 
-                if altRejected == False and alt.name.find(clashingCourseName) > -1:
+                if altRejected == False and alt.name.find(
+                        clashingCourseName) > -1:
                     string = "Try using "+alt.name+" instead of "+clashingCourse.name+"\n" +\
                         "(" + toHoursAndMinutes(alt.startMin)+") to (" + \
                         toHoursAndMinutes(alt.endMin)+") on "+key
@@ -148,7 +153,7 @@ if __name__ == "__main__":
     # filename = input("Enter the csv file's name or path: ")
     filename = "timeTable.csv"
     outputFile = open("OutputTimeTable.txt", "a+")
-   # separator = "#####################################\n#####################################\n#####################################\n"
+    # separator = "#####################################\n#####################################\n#####################################\n"
     createTable(table, filename, completeCourseList)
     completeCourseList.sort()
 
@@ -187,7 +192,8 @@ if __name__ == "__main__":
 
         while True:
             gs = input(
-                "Do you want to get suggestions for clash resolution? (Experimental) y/n:")
+                "Do you want to get suggestions for clash resolution? (Experimental) y/n:"
+            )
             if gs == "n" or gs == "N":
                 giveSuggestions = False
                 break
@@ -196,7 +202,8 @@ if __name__ == "__main__":
                 break
         while True:
             gs = input(
-                "Do you want to print a list of alternative courses? (Experimental) y/n:")
+                "Do you want to print a list of alternative courses? (Experimental) y/n:"
+            )
             if gs == "n" or gs == "N":
                 getAlternatives = False
                 break
@@ -223,14 +230,14 @@ if __name__ == "__main__":
         print("\n")
         for index in coursesList:
             ind = int(index)
-            if(ind >= len(completeCourseList)-1):
+            if (ind >= len(completeCourseList) - 1):
                 print("<!ERROR!> Enter a number in range! <!ERROR!>")
                 exit()
             selectedCourses.append(completeCourseList[ind - 1])
             temp = completeCourseList[ind - 1].split(" (")
             courseNamesWithoutSections.append(temp[0])
             outputFile.write(completeCourseList[ind - 1] + "; ")
-            print("\t-> "+completeCourseList[ind - 1])
+            print("\t-> " + completeCourseList[ind - 1])
         outputFile.write("\n\n")
         print("\n")
 
@@ -252,7 +259,7 @@ if __name__ == "__main__":
 
                             if prevEndMin > tempCourse.startMin:
                                 clashingCourses[key].append(tempCourse)
-                                length = len(OutputTimeTable[key])-2
+                                length = len(OutputTimeTable[key]) - 2
                                 clashingCourses[key].append(
                                     OutputTimeTable[key][length])
                             elif clashCount > 1:
@@ -263,9 +270,11 @@ if __name__ == "__main__":
                         else:
                             for cnwoc in courseNamesWithoutSections:
                                 if table[key][i][j].name.rfind(cnwoc) > -1:
-                                    if table[key][i][j] not in clashingCoursesAlternatives[key]:
-                                        clashingCoursesAlternatives[key].append(
-                                            table[key][i][j])
+                                    if table[key][i][
+                                            j] not in clashingCoursesAlternatives[
+                                                key]:
+                                        clashingCoursesAlternatives[
+                                            key].append(table[key][i][j])
 
         text = "TIME TABLE"
         text = text.center(80, "-")
@@ -290,8 +299,8 @@ if __name__ == "__main__":
             print("\n")
             outputFile.write(st)
             outputFile.write("\n\n")
-            suggestions = findSuggestedCourse(OutputTimeTable,
-                                              clashingCourses, clashingCoursesAlternatives)
+            suggestions = findSuggestedCourse(OutputTimeTable, clashingCourses,
+                                              clashingCoursesAlternatives)
             for s in suggestions:
                 print("-> " + s)
 
