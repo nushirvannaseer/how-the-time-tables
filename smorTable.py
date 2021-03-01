@@ -230,7 +230,7 @@ if __name__ == "__main__":
         print("\n")
         for index in coursesList:
             ind = int(index)
-            if (ind >= len(completeCourseList) - 1):
+            if (ind > len(completeCourseList)):
                 print("<!ERROR!> Enter a number in range! <!ERROR!>")
                 exit()
             selectedCourses.append(completeCourseList[ind - 1])
